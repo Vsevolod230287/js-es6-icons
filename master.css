@@ -16,6 +16,7 @@ header {
 }
 
 div.filter {
+  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -61,4 +62,19 @@ div.card {
 
 .users {
   color: #800080;
+}
+
+select {
+  border-radius: 7px;
+  background-color: lightgray;
+  box-shadow: 0px 0px 7px -1px;
+  font-size: 18px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+i {
+  font-size: 50px;
 }

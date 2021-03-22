@@ -117,80 +117,78 @@ icons.forEach((item, i, array) => {
 
 $("select").change(function() {
 
-      if ($(this).val() == 'all') {
+  if ($(this).val() == 'all') {
 
-        icons.forEach((item, i) => {
-          $('.canvas .card').remove();
-        });
+    icons.forEach((item, i) => {
+      $('.canvas .card').remove();
+    });
 
-        icons.forEach((item, i, array) => {
+    icons.forEach((item, i, array) => {
 
-            $('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+      $('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
 
-            if (item.type == 'animal') {
-              $('.template.card i').addClass('animals');
-              }
-              else if (item.type == 'vegetable') {
-                $('.template .card i.').addClass('vegetables');
-              } else if (item.type == 'user') {
-                $('.template .card i').addClass('users');
-              }
+      if (item.type == 'animal') {
+        $('.template.card i').addClass('animals');
+      } else if (item.type == 'vegetable') {
+        $('.template .card i').addClass('vegetables');
+      } else if (item.type == 'user') {
+        $('.template .card i').addClass('users');
+      }
 
-              let cardClone = $('.template .card').clone()
-              $('div.canvas').append(cardClone);
-            });
+      let cardClone = $('.template .card').clone()
+      $('div.canvas').append(cardClone);
+    });
 
-        }
-        else if ($(this).val() == 'animal') {
+  } else if ($(this).val() == 'animal') {
 
-          icons.forEach((item, i) => {
-            $('.canvas .card').remove();
-          });
+    icons.forEach((item, i) => {
+      $('.canvas .card').remove();
+    });
 
-          const animals = icons.filter((item) => {
-            return item.type == 'animal';
-          })
+    const animals = icons.filter((item) => {
+      return item.type == 'animal';
+    })
 
 
-          animals.forEach((item, i, array) => {
-            $('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
-            $('.template .card i').addClass('animals');
-            let cardClone = $('.template .card').clone()
-            $('div.canvas').append(cardClone);
-          })
+    animals.forEach((item, i, array) => {
+      $('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+      $('.template .card i').addClass('animals');
+      let cardClone = $('.template .card').clone()
+      $('div.canvas').append(cardClone);
+    })
 
-        } else if ($(this).val() == 'vegetable') {
+  } else if ($(this).val() == 'vegetable') {
 
-          icons.forEach((item, i) => {
-            $('.canvas .card').remove();
-          });
+    icons.forEach((item, i) => {
+      $('.canvas .card').remove();
+    });
 
-          const vegetables = icons.filter((item) => {
-            return item.type == 'vegetable';
-          })
+    const vegetables = icons.filter((item) => {
+      return item.type == 'vegetable';
+    })
 
-          vegetables.forEach((item, i, array) => {
-            $('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
-            $('.template .card i').addClass('vegetables');
-            let cardClone = $('.template .card').clone()
-            $('div.canvas').append(cardClone);
-          })
+    vegetables.forEach((item, i, array) => {
+      $('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+      $('.template .card i').addClass('vegetables');
+      let cardClone = $('.template .card').clone()
+      $('div.canvas').append(cardClone);
+    })
 
-        } else if ($(this).val() == 'user') {
+  } else if ($(this).val() == 'user') {
 
-          icons.forEach((item, i) => {
-            $('.canvas .card').remove();
-          });
+    icons.forEach((item, i) => {
+      $('.canvas .card').remove();
+    });
 
-          const users = icons.filter((item) => {
-            return item.type == 'user';
-          })
+    const users = icons.filter((item) => {
+      return item.type == 'user';
+    })
 
-          users.forEach((item, i, array) => {
-            $('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
-            $('.template .card i').addClass('users');
-            let cardClone = $('.template .card').clone()
-            $('div.canvas').append(cardClone);
-          })
-        }
-      });
+    users.forEach((item, i, array) => {
+      $('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+      $('.template .card i').addClass('users');
+      let cardClone = $('.template .card').clone()
+      $('div.canvas').append(cardClone);
+    })
+  }
+});
