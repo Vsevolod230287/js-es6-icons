@@ -97,9 +97,17 @@ const icons = [{
 ];
 
 
-icons.forEach((item, i) => {
-  let cardClone = $('.template .card').clone();
+icons.forEach((item, i, array) => {
+console.log(array.length);
+	$('.template .card i').addClass(`${item.family} ${item.prefix}${item.name}`)
+  let cardClone = $('.template .card').clone()
   $('div.canvas').append(cardClone);
-  $('.canvas .card i').addClass(`${item.family} ${item.prefix}${item.name}`)
 
 });
+
+let a = $( "select" ).val();
+console.log(a);
+$( "select" )
+  .change(function () {
+ console.log($(this).val());
+  })
