@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: red;
+}
+
+header {
+  display: flex;
+  align-items: flex-end;
+  background-color: white;
+  height: 60px;
+}
+
+div.filter {
+  display: flex;
+  justify-content: center;
+}
+
+div.filter h2 {
+  margin-right: 10px;
+}
+div.canvas {
+  padding-top: 20px;
+  display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+div.card {
+  border-radius: 7px;
+  justify-content: center;
+  display: flex;
+  width: 140px;
+  height: 90px;
+  background-color: #E3E3E3;
+  align-items: center;
+}
+
+
+.container {
+  margin: 0 auto;
+  width: 1300px;
+}
+
+.template{
+  display: none;
+}
