@@ -111,16 +111,36 @@ const users = icons.filter((item) => {
 
 icons.forEach((item, i, array) => {
 	$('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+  if(item.type == 'animal'){
+		 $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('animals');
+	}else if (item.type == 'vegetable') {
+    $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('vegetables');
+	}else if (item.type == 'user') {
+    $('.template .card i').addClass('users');
+	}
 	let cardClone = $('.template .card').clone()
 	$('div.canvas').append(cardClone);
+
+
+
+
 });
+
 
 $("select").change(function() {
 
   icons.forEach((item, i, array) => {
 		$('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+    if(item.type == 'animal'){
+       $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('animals');
+    }else if (item.type == 'vegetable') {
+      $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('vegetables');
+    }else if (item.type == 'user') {
+      $('.template .card i').addClass('users');
+    }
     let cardClone = $('.template .card').clone()
     $('div.canvas').append(cardClone);
+
   });
 
   if ($(this).val() == 'all') {
@@ -131,6 +151,13 @@ $("select").change(function() {
 
     icons.forEach((item, i, array) => {
 			$('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+      if(item.type == 'animal'){
+         $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('animals');
+      }else if (item.type == 'vegetable') {
+        $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('vegetables');
+      }else if (item.type == 'user') {
+        $('.template .card i').addClass('users');
+      }
       let cardClone = $('.template .card').clone()
       $('div.canvas').append(cardClone);
     });
@@ -142,6 +169,13 @@ $("select").change(function() {
 
     animals.forEach((item, i, array) => {
 			$('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+      if(item.type == 'animal'){
+         $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('animals');
+      }else if (item.type == 'vegetable') {
+        $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('vegetables');
+      }else if (item.type == 'user') {
+        $('.template .card i').addClass('users');
+      }
       let cardClone = $('.template .card').clone()
       $('div.canvas').append(cardClone);
     })
@@ -153,6 +187,13 @@ $("select").change(function() {
 
     vegetables.forEach((item, i, array) => {
 			$('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+      if(item.type == 'animal'){
+         $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('animals');
+      }else if (item.type == 'vegetable') {
+        $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('vegetables');
+      }else if (item.type == 'user') {
+        $('.template .card i').addClass('users');
+      }
       let cardClone = $('.template .card').clone()
       $('div.canvas').append(cardClone);
     })
@@ -164,6 +205,13 @@ $("select").change(function() {
 
     users.forEach((item, i, array) => {
 			$('.template .card').html(`<i class="${item.family} ${item.prefix}${item.name}"></i>`);
+      if(item.type == 'animal'){
+         $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('animals');
+      }else if (item.type == 'vegetable') {
+        $(`.template .card i.${item.family}.${item.prefix}${item.name}`).addClass('vegetables');
+      }else if (item.type == 'user') {
+        $('.template .card i').addClass('users');
+      }
       let cardClone = $('.template .card').clone()
       $('div.canvas').append(cardClone);
     })

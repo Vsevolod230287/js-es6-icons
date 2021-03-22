@@ -50,3 +50,15 @@ div.card {
 .template {
   display: none;
 }
+
+.animals {
+  color: #0000FF;
+}
+
+.vegetables {
+  color: #FFA500;
+}
+
+.users {
+  color: #800080;
+}
